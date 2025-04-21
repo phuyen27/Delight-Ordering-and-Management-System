@@ -1,0 +1,187 @@
+
+body {
+    background-color: #f5f5f5; 
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* Màu trắng nhẹ nhàng */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 60%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+
+h1 {
+    color: #d9534f;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.img img {
+    height: 220px;
+    transition: transform 0.3s ease;
+}
+.img h3 {
+    color: #d9534f; 
+    font-size: 1.2rem;
+}
+
+.img_login:hover {
+    transform: scale(1.05); 
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #d9534f;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+input:focus {
+    border-color: #28a745; 
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.6);
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+}
+
+button:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px); 
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.input-group {
+    width: 100%;
+}
+
+#submit {
+    width: 90%;
+    padding: 12px;
+    background-color: #d9534f; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register {
+    padding-right: 5px;
+
+}
+
+.register,.forgotPass {
+    color: #28a745; ;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9ee6be; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ee6be; 
+}
+
+
+html {
+    scrollbar-width: thin; 
+    scrollbar-color: #9ee6be rgba(0, 0, 0, 0.1); 
+}
+
+/*register*/
+.username {
+    display: flex;
+    width: 55%;
+    gap: 14px;
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width: 786px) { 
+    .login-container {
+        display: flex;
+        max-width: 700px;
+        height: 100%;
+        justify-content: space-around;
+       }
+    
+    
+    .login-form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 60%;
+    }
+    .img img {
+        height: 350px;
+    }
+
+    input {
+        width: 60%;
+       }
+    
+       #submit {
+        width: 65%;
+       }
+}
+
+
+@media screen and (min-width: 1150px) {
+   .login-container {
+    max-width: 900px;
+   }
+
+   input {
+    width: 50%;
+   }
+
+   #submit {
+    width: 55%;
+   }
+
+   .img img {
+    height: 400px;
+   }
+} 

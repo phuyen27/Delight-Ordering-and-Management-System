@@ -1,0 +1,352 @@
+﻿
+/*productscss*/
+/* Bảng màu xanh lá cây */
+.table_green {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+    .table_green th {
+        background-color: #4CAF50; /* Màu xanh lá cây cho header */
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table_green td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table_green td, .table_green th {
+        vertical-align: middle;
+    }
+
+        .table_green td img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+    .table_green tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .table_green td:nth-child(6) {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .table_green td:last-child {
+        text-align: center;
+        font-weight: bold;
+    }
+
+.table_green {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Bảng màu pastel cho Giáng Sinh */
+.table_pastel_christmas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+    .table_pastel_christmas th {
+        background-color: #d47f7f; /* Màu hồng pastel cho header */
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table_pastel_christmas td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table_pastel_christmas td, .table_pastel_christmas th {
+        vertical-align: middle;
+    }
+
+        .table_pastel_christmas td img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+    .table_pastel_christmas tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    .table_pastel_christmas td:nth-child(6) {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .table_pastel_christmas td:last-child {
+        text-align: center;
+        font-weight: bold;
+    }
+
+.table_pastel_christmas {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td input {
+    padding: 4px;
+    border-radius: 5px;
+}
+
+
+/*order manage css*/
+
+.editButton input, .deleteButton input {
+    border-radius: 10px;
+    padding: 6px;
+    border: 0px;
+}
+
+.editButton input {
+    background-color: cadetblue;
+}
+
+.deleteButton input {
+    background-color: red;
+}
+
+.editButton input:hover {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+.deleteButton input:hover {
+    background-color: #FF6F61;
+    cursor: pointer;
+}
+
+.order_edit {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    .order_edit div {
+        display: flex;
+        align-items: center;
+    }
+
+/* Định dạng container chính */
+.order_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form chỉnh sửa đơn hàng */
+.order_edit {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Bố cục từng dòng */
+    .order_edit div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    /* Nhãn cho input */
+    .order_edit label, .order_edit span {
+        font-weight: bold;
+        min-width: 130px;
+    }
+
+    /* Input & Dropdown */
+    .order_edit .text_edit,
+    .order_edit .form-control,
+    .order_edit input[type="datetime-local"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Hiệu ứng hover cho input */
+        .order_edit .text_edit:focus,
+        .order_edit .form-control:focus,
+        .order_edit input[type="datetime-local"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    /* Dropdown List */
+    .order_edit .form-control {
+        appearance: none;
+        background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23007bff"/></svg>') no-repeat right 10px center;
+        background-size: 12px;
+        cursor: pointer;
+    }
+
+/* Nút Submit */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+    /* Hiệu ứng hover nút */
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Biểu đồ */
+.chart-container {
+    width: 300px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.orderdetail_info {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetail_Add,
+.orderDetail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+    /* Form Fields */
+    .orderDetail_Add > div {
+        flex: 1 1 calc(50% - 20px); /* Makes each div take up half the width */
+    }
+
+    .orderDetail_Add label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+.text_edit {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+.cancel-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .cancel-btn:hover {
+        background-color: #45a049;
+    }
+
+/* Dropdown Styles */
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Search Box */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+    .search-container label {
+        font-weight: bold;
+    }
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+    .search-input::placeholder {
+        color: #999;
+    }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .orderDetail_Add > div {
+        flex: 1 1 100%;
+    }
+
+    .orderDetail {
+        flex-direction: column;
+    }
+}
+
+td input {
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid cadetblue;
+    width: 100px;
+}

@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sidebar.master.cs" Inherits="DelightShop.Admin.sidebar" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="<%= ResolveUrl("~/assets/css/sidebar.css") %>">
+	<link rel="stylesheet" href="<%= ResolveUrl("~/assets/css/form.css") %>">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<title>Delight Store Manager</title>
+</head>
+<body>
+       
+		   
+	<form id="form1" runat="server">
+		<div>
+		<!-- SIDEBAR -->
+		<section id="sidebar">
+			<a href="#" class="brand">
+				<i class='bx bxs-tree'></i>
+				<span class="text">Delight Manager</span>
+			</a>
+			<ul class="side-menu top">
+				<li class="">
+					<a href="Dashboard.aspx">
+						<i class='bx bxs-dashboard' ></i>
+						<span class="text">Tổng quan</span>
+					</a>
+					<a href="ManageComment.aspx">
+						<i class='bx bxs-message-rounded-dots' ></i>
+						<span class="text">Quản lý đánh giá</span>
+					</a>
+				</li>
+				<li class="submenu">
+					<a href="#">
+						<i class='bx bxs-user'></i>
+						<span class="text">Quản lý tài khoản</span>
+						<i class='bx bx-chevron-down toggle-icon icon_hiden'></i>
+					</a>
+					<ul class="submenu-list">
+						<li><a href="CustomerManagement.aspx">Quản lý khách hàng</a></li>
+						<li><a href="EmployeeManagement.aspx">Quản lý nhân viên</a></li>
+						<li><a href="Supplier.aspx">Quản lý nhà cung cấp</a></li>
+					</ul>
+				</li>
+			
+				<li class="submenu">
+					<a href="#">
+						<i class='bx bxs-basket'></i>
+						<span class="text">Quản lý hóa đơn</span>
+						<i class='bx bx-chevron-down toggle-icon icon_hiden'></i>
+					</a>
+					<ul class="submenu-list">
+						<li><a href="ReceiptManage.aspx">Phiếu nhập</a></li>
+						<li><a href="ReceipDetail.aspx">Chi tiết phiếu nhập</a></li>
+						<li><a href="ManageOrders.aspx">Đơn đặt hàng</a></li>
+						<li><a href="OrderDetail.aspx">Chi tiết đơn đặt</a></li>
+					</ul>
+				</li>
+			
+				<li class="submenu">
+					<a href="#">
+						<i class='bx bxl-shopify'></i>
+						<span class="text">Quản lý sản phẩm</span>
+						<i class='bx bx-chevron-down toggle-icon icon_hiden'></i>
+					</a>
+					<ul class="submenu-list">
+						<li><a href="ManageCategory.aspx">Quản lý loại sản phẩm</a></li>
+						<li><a href="ProductsManagement.aspx">Quản lý sản phẩm</a></li>
+					</ul>
+				</li>
+			
+
+			
+			
+				<li>
+					<a href="ManageDepartment.aspx">
+						<i class='bx bxs-group' ></i>
+						<span class="text">Quản lý phòng ban</span>
+					</a>
+				</li>
+
+				<li class="">
+					<a href="Statistical.aspx">
+						<i class='bx bxs-bar-chart-alt-2'></i>
+						<span class="text">Thống kê & báo cáo</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="side-menu">
+				<li>
+					<a href="#">
+						<i class='bx bxs-cog' ></i>
+						<span class="text">Cài đặt</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="logout">
+						<i class='bx bxs-log-out-circle' ></i>
+						<span class="text">Đăng xuất</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- SIDEBAR -->
+
+		<!-- CONTENT -->
+		<section id="content">
+			<!-- NAVBAR -->
+			<nav>
+				<i class='bx bx-menu' ></i>
+				<div>
+					<form id="formSearch" >
+						<div class="form-input">
+							<asp:TextBox ID="txtSearch" runat="server" placeholder="Tìm kiếm..." CssClass="search-box" />
+							<asp:Button ID="btnSearch" runat="server" CssClass="search-btn" Text="🔍" OnClick="btnSearch_Click" />
+						</div>
+					</form>	
+					<a href="#" class="profile">
+						<img src="/assets/img/logoShop.png">
+					</a>
+				</div>
+			</nav>
+			<!-- NAVBAR -->
+
+
+			<!-- MAIN -->
+					 <asp:ContentPlaceHolder ID="adminContent" runat="server" />
+			<!-- MAIN -->
+		</section>
+		<!-- CONTENT -->
+				<script src="<%= ResolveUrl("~/assets/js/script.js") %>"></script>
+			   <style>
+		nav div {
+			display:flex;
+			justify-content:flex-end;
+			align-items: center;
+			width: 95%;
+		}
+
+		.submenu .submenu-list {
+		display: none;
+		padding-left: 20px;
+	}
+
+	.submenu.active .submenu-list {
+		display: block;
+	}
+
+	.submenu .toggle-icon {
+		margin-left: auto;
+		transition: transform 0.3s ease;
+	}
+
+	.submenu.active .toggle-icon {
+		transform: rotate(180deg);
+	}
+	.form-input {
+	
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.search-box {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    flex: 1;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #333;
+}
+
+.search-box::placeholder {
+    color: #aaa;
+}
+
+.search-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+}
+
+	</style>
+	
+		</div>
+	</form>
+		   <script>
+               document.querySelectorAll('.submenu > a').forEach(menu => {
+                   menu.addEventListener('click', function (e) {
+                       e.preventDefault(); // Ngăn chuyển trang khi click
+
+                       const parentLi = this.parentElement;
+
+                       // Nếu đã mở -> đóng
+                       if (parentLi.classList.contains('active')) {
+                           parentLi.classList.remove('active');
+                       } else {
+                           // Đóng tất cả các submenu khác
+                           document.querySelectorAll('.submenu').forEach(item => {
+                               item.classList.remove('active');
+                           });
+
+                           // Mở cái đang click
+                           parentLi.classList.add('active');
+                       }
+                   });
+               });
+
+           </script>
+</body>
+
+
+</html>

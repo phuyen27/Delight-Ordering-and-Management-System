@@ -1,0 +1,183 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderFooter.master.cs" Inherits="DelightShop.User.HeaderFooter" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+    <title>Christmas shop</title>
+    <link rel="shortcut icon" href="/assets/img/icon.webp" type="image/x-icon">
+ 
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets/css/atropos.min.css") %>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets/css/style.css") %>">
+</head>
+
+<script>
+    function confirmLogout(event) {
+        event.preventDefault();
+
+        if (confirm("Bạn có muốn đăng xuất không?")) {
+            window.location.href = "/Signin.aspx";
+        }
+    }
+</script>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">
+                <img src="/assets/img/logoShop.png" alt="" class="nav__logo-img">
+                    <span class="nav__logo-name">Delight <br><span>Shop</span></span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="HomePage.aspx" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="AboutShop.aspx" class="nav__link">About the shop</a></li>
+                    <li class="nav__item"><a href="Shop.aspx" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="Contact.aspx" class="nav__link">Contact</a></li
+                    <li class="nav__item"><a href="FAQ.aspx" class="nav__link">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+             <div class="nav__buttons">
+             
+                   <a href="Cart.aspx">
+                        <i class="ri-shopping-cart-fill"></i>
+                    </a>                    
+               
+
+                <a href="#" onclick="confirmLogout(event)">
+                    <i class="ri-logout-box-r-fill"></i>
+                </a>
+
+                 <a href="UserInfor.aspx">
+                     <i class="ri-user-5-fill"></i>
+                 </a>
+
+                 <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="snow">
+         <img src="/assets/img/snow.png" alt="">
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div>
+                <a href="#" class="footer__logo">Delight</a>
+                <p class="footer__description">Choose the best <br> Decorate your home</p>
+            </div>
+            <div class="footer__content grid">
+                <div>
+                    <h3 class="footer__title">COMPANY</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">About Us</a></li>
+                        <li><a href="#" class="footer__link">Products</a></li>
+                        <li><a href="#" class="footer__link">Features</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">INFORMATION</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Blogs & News</a></li>
+                        <li><a href="#" class="footer__link">Contacts Us</a></li>
+                        <li><a href="#" class="footer__link">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">SOCIAL MEDIA</h3>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://x.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy"> &#169; All Rights Reserved By Phuong Uyen </span>
+    </footer>
+
+
+    <script src="<%= ResolveUrl("~/assets/js/main.js") %>"></script>
+    <script src="<%= ResolveUrl("~/assets/js/atropos.js") %>"></script>
+    <script>
+        window.onscroll = function () { addShadowOnScroll() };
+
+        function addShadowOnScroll() {
+            var header = document.getElementById("header");
+            // Kiểm tra vị trí cuộn trang
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                // Nếu cuộn xuống quá 50px, thêm lớp 'shadow'
+                header.classList.add("shadow");
+            } else {
+                // Nếu không, bỏ lớp 'shadow'
+                header.classList.remove("shadow");
+            }
+        }
+
+
+        // Tạo bông tuyết ngẫu nhiên và thêm vào trang
+        function createSnowflakes() {
+            const snowContainer = document.querySelector('.snow');
+            const snowflakeCount = 50; // Số lượng bông tuyết
+            const snowflakeChars = ['❄', '☃', '❅']; // Các ký tự bông tuyết
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('span');
+                snowflake.classList.add('snowflake');
+                snowflake.innerText = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
+
+                snowflake.style.left = `${Math.random() * 100}vw`; // Vị trí ngang ngẫu nhiên
+                snowflake.style.animationDuration = `${Math.random() * 20 + 15}s`; // Thời gian rơi ngẫu nhiên
+                snowflake.style.fontSize = `${Math.random() * 7 + 5}px`; // Kích thước bông tuyết ngẫu nhiên
+
+                snowContainer.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes();
+
+
+        const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu')
+            })
+        }
+
+        /*=============== REMOVE MENU MOBILE ===============*/
+        const navLink = document.querySelectorAll('.nav__link')
+
+        const linkAction = () => {
+            const navMenu = document.getElementById('nav-menu')
+            navMenu.classList.remove('show-menu')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+
+    </script>
+
+</body>
+</html>
