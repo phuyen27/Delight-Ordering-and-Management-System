@@ -20,7 +20,7 @@
                         </div>
 
                         <div>
-                            <asp:Label ID="LabelMaSP" runat="server" Text="Mã SP"></asp:Label>
+                            <asp:Label ID="LabelMaSP" runat="server" Text="Sản phẩm"></asp:Label>
                             <asp:TextBox ID="EditMaSP" runat="server" CssClass="text_edit"></asp:TextBox>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                     </div>
                     
                     <div>
-                        <asp:Button ID="btnAddDetail" runat="server" Text="Add" CssClass="cancel-btn" OnClick="btnAdd_Detail" />
+                        <asp:Button ID="btnAddDetail" runat="server" Text="Thêm" CssClass="cancel-btn" OnClick="btnAdd_Detail" />
                     </div>
                 </div>
 
@@ -53,9 +53,9 @@
                 OnRowUpdating="gvOrderDetails_RowUpdating"
                 DataKeyNames="orderDetailID">
                 <Columns>
-                    <asp:BoundField DataField="orderDetailID" HeaderText="Order Detail ID" SortExpression="orderDetailID" ReadOnly="True" />
+                    <asp:BoundField DataField="orderDetailID" HeaderText="Mã CT" SortExpression="orderDetailID" ReadOnly="True" />
 
-                    <asp:TemplateField HeaderText="Product name">
+                    <asp:TemplateField HeaderText="Mã SP">
                         <ItemTemplate>
                             <asp:Label ID="lblProductName" runat="server" Text='<%# Eval("orderDetailName") %>' />
                         </ItemTemplate>
@@ -64,7 +64,7 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Quantity">
+                    <asp:TemplateField HeaderText="Số lượng">
                         <ItemTemplate>
                             <asp:Label ID="lblQuantity" runat="server" Text='<%# Eval("quantity") %>' />
                         </ItemTemplate>
@@ -73,7 +73,7 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Price">
+                    <asp:TemplateField HeaderText="Gía">
                         <ItemTemplate>
                             <asp:Label ID="lblPrice" runat="server" Text='<%# Eval("price") %>' />
                         </ItemTemplate>
@@ -82,10 +82,10 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:BoundField DataField="orderID" HeaderText="Order ID" SortExpression="orderID" ReadOnly="True" />
+                    <asp:BoundField DataField="orderID" HeaderText="Mã đơn đặt" SortExpression="orderID" ReadOnly="True" />
 
-                    <asp:CommandField ShowEditButton="True" HeaderText="Edit" ButtonType="Button" ItemStyle-CssClass="editButton" />
-                    <asp:CommandField ShowDeleteButton="True" HeaderText="Delete" ButtonType="Button" ItemStyle-CssClass="deleteButton" />
+                    <asp:CommandField ShowEditButton="True" HeaderText="Sửa" ButtonType="Button" ItemStyle-CssClass="editButton" />
+                    <asp:CommandField ShowDeleteButton="True" HeaderText="Xóa" ButtonType="Button" ItemStyle-CssClass="deleteButton" />
                 </Columns>
             </asp:GridView>
 

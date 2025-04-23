@@ -12,19 +12,23 @@ namespace DelightShop.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string searchParam = Request.QueryString["search"];
-            int keyword;
+            if (!IsPostBack)
+            {
+                loadDropdown(); // ✅ Luôn load dropdown duy nhất 1 lần khi lần đầu mở trang
 
-            if (int.TryParse(searchParam, out keyword))
-            {
-                var result = order.GetReceiptDetailsWithID(keyword);
-                gvReceiptDetails.DataSource = result;
-                gvReceiptDetails.DataBind();
-            }
-            else
-            {
-                BindData();
-                loadDropdown();
+                string searchParam = Request.QueryString["search"];
+                int keyword;
+
+                if (int.TryParse(searchParam, out keyword))
+                {
+                    var result = order.GetReceiptDetailsWithID(keyword);
+                    gvReceiptDetails.DataSource = result;
+                    gvReceiptDetails.DataBind();
+                }
+                else
+                {
+                    BindData();
+                }
             }
         }
 
@@ -44,15 +48,12 @@ namespace DelightShop.Admin
             ddlReceiptDetailID.DataSource = phieuNhapID;
             ddlReceiptDetailID.DataBind();
 
-            ddlReceiptDetailID.Items.Insert(0, new ListItem("-- Chọn mã phiếu nhập --", "0")); // Tuỳ chọn mặc định
-
+           
             string querySP = "Select MaSP from SanPham";
             List<int> spID = admin.GetIDs(querySP, "MaSP"); // Gọi hàm bạn đã viết
 
             ddlReceiptProductID.DataSource = spID;
             ddlReceiptProductID.DataBind();
-
-            ddlReceiptProductID.Items.Insert(0, new ListItem("-- Chọn mã sản phẩm --", "0")); // Tuỳ chọn mặc định
 
             string queryNV = "Select MaNV from NhanVien";
             List<int> nvID = admin.GetIDs(queryNV, "MaNV"); // Gọi hàm bạn đã viết
@@ -68,6 +69,9 @@ namespace DelightShop.Admin
             if (order.DeleteReceiptDetail(receiptId, productId))
             {
                 BindData();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Xóa thành công');", true);
+
             }
         }
 
@@ -99,6 +103,9 @@ namespace DelightShop.Admin
             {
                 gvReceiptDetails.EditIndex = -1;
                 BindData();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Cập nhật thành công');", true);
+
             }
         }
 
@@ -118,12 +125,17 @@ namespace DelightShop.Admin
                 Price = decimal.Parse(txtPrice.Text),
 
             };
-           
-
 
             if (order.InsertReceiptDetail(newDetail))
             {
                 BindData();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Thêm chi tiết phiếu thành công');", true);
+            }
+            else
+            {
+
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Có lỗi sảy ra!');", true);
             }
         }
 

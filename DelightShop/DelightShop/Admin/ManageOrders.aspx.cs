@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
+using WebGrease.Activities;
 
 namespace DelightShop.Admin
 {
@@ -18,10 +19,29 @@ namespace DelightShop.Admin
         {
             if (!IsPostBack)
             {
-                BindOrderData();
-                statusOrder();
-                
+                string keyword = Request.QueryString["search"];
+
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    if (int.TryParse(keyword, out int maDH))
+                    {
+                        var result = order.getOrder(maDH); // Gọi hàm với int
+                        gvOrders.DataSource = result;
+                        gvOrders.DataBind();
+                    }
+                    else
+                    {
+                        BindOrderData();
+                        statusOrder();
+                    }
+                }
+                else
+                {
+                    BindOrderData();
+                    statusOrder();
+                }
             }
+
 
         }
 

@@ -11,7 +11,31 @@ namespace DelightShop.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindOrderDetailData();
+
+            if (!IsPostBack)
+            {
+                string keyword = Request.QueryString["search"];
+
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    if (int.TryParse(keyword, out int maDH))
+                    {
+                        var result = order.getOrderDetail(maDH); // Gọi hàm với int
+                        gvOrderDetails.DataSource = result;
+                        gvOrderDetails.DataBind();
+                    }
+                    else
+                    {
+                        BindOrderDetailData();
+                    }
+                }
+                else
+                {
+                    BindOrderDetailData();
+                }
+            }
+
+           
         }
 
         private void BindOrderDetailData()

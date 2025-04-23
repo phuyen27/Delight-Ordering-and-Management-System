@@ -357,7 +357,7 @@ namespace DelightShop
 
                 string query = @"
             SELECT 
-                MaDH,TongTien,NgayDat
+                MaDH,TongTien,NgayDat, MaKH, TrangThai
             FROM 
                 DonDH 
             WHERE 
@@ -375,7 +375,10 @@ namespace DelightShop
                     {
                         orderID = Convert.ToInt32(reader["MaDH"]),
                         orderDate = reader["NgayDat"].ToString(),
-                        total = Convert.ToDecimal(reader["TongTien"])
+                        total = Convert.ToDecimal(reader["TongTien"]),
+                        Status = reader["TrangThai"].ToString(),
+                        userID = Convert.ToInt32(reader["MaKH"])
+
                     };
                     orderItems.Add(orderItem);
                 }

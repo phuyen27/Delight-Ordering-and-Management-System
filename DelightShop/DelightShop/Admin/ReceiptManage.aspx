@@ -37,7 +37,7 @@
                  </div>
 
                 <div>
-                    <asp:Button ID="btnAddReceipt" runat="server" Text="Add Receipt" CssClass="btn btn-primary" OnClick="btnAddReceipt_Click" />
+                    <asp:Button ID="btnAddReceipt" runat="server" Text="Thêm phiếu nhập" CssClass="btn btn-primary" OnClick="btnAddReceipt_Click" />
                 </div>
                 <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
             </div>
