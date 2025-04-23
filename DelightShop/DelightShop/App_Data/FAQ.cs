@@ -19,6 +19,41 @@ namespace DelightShop
 
         private static string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
 
+        //tìm kiếm:
+        // Tìm kiếm theo comment (giống kiểu %keyword%)
+        public static List<FAQItem> SearchFAQByComment(string keyword)
+        {
+            List<FAQItem> list = new List<FAQItem>();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = "SELECT MaDG, MaDH, Comment, DateFAQ FROM DanhGia WHERE Comment LIKE @keyword";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    FAQItem item = new FAQItem
+                    {
+                        MaDG = Convert.ToInt32(reader["MaDG"]),
+                        MaDH = Convert.ToInt32(reader["MaDH"]),
+                        Comment = reader["Comment"].ToString(),
+                        DateFAQ = Convert.ToDateTime(reader["DateFAQ"])
+                    };
+                    list.Add(item);
+                }
+
+                reader.Close();
+            }
+
+            return list;
+        }
+
+
         // Lấy tất cả đánh giá
         public static List<FAQItem> GetAllFAQ()
         {

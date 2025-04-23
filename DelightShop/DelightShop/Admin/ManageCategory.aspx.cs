@@ -16,9 +16,9 @@ namespace DelightShop.Admin
                 string keyword = Request.QueryString["search"];
                 if (!string.IsNullOrEmpty(keyword))
                 {
-                    //var result = classProduct.SearchCategoriesByName(keyword);
-                    //gvCategories.DataSource = result;
-                    //gvCategories.DataBind();
+                    var result = classProduct.SearchCategoriesByName(keyword);
+                    gvCategories.DataSource = result;
+                    gvCategories.DataBind();
                 }
                 else
                 {

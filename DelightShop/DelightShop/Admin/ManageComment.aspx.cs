@@ -15,8 +15,19 @@ namespace DelightShop.Admin
         {
             if (!IsPostBack)
             {
+                string keyword = Request.QueryString["search"];
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    var result = FAQ.SearchFAQByComment(keyword);
+                    gvFAQs.DataSource = result;
+                    gvFAQs.DataBind();
+                }
+                else
+                {
+                    BindFAQList();
+                }
                 LoadDonHangDropDowns();
-                BindFAQList();
+
             }
         }
 
@@ -29,7 +40,7 @@ namespace DelightShop.Admin
             ddlMaDH.DataSource = spID;
             ddlMaDH.DataBind();
 
-            ddlMaDH.Items.Insert(0, new ListItem("-- Chọn mã sản phẩm --", "0")); // Tuỳ chọn mặc định
+            ddlMaDH.Items.Insert(0, new ListItem("-- Mã đơn hàng --", "0")); // Tuỳ chọn mặc định
         }
 
         // Hiển thị danh sách đánh giá
@@ -51,7 +62,14 @@ namespace DelightShop.Admin
             {
                 BindFAQList();
                 txtComment.Text = "";
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Thêm thành công!');", true);
             }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Đã xảy ra lỗi khi thêm câu hỏi.');", true);
+            }
+
         }
 
 
@@ -72,6 +90,7 @@ namespace DelightShop.Admin
             int maDG = Convert.ToInt32(gvFAQs.DataKeys[e.RowIndex].Value);
             FAQ.DeleteFAQ(maDG);
             BindFAQList();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Xóa thành công!');", true);
         }
 
         protected void gvFAQs_RowEditing(object sender, GridViewEditEventArgs e)
@@ -96,6 +115,7 @@ namespace DelightShop.Admin
             };
 
             FAQ.UpdateFAQ(faq);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Sửa thành công!');", true);
 
             gvFAQs.EditIndex = -1;
             BindFAQList();

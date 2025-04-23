@@ -209,7 +209,7 @@ namespace DelightShop.Admin
                 ddl.DataValueField = "MaPhong";
                 ddl.DataBind();
             }
-            ddl.Items.Insert(0, new ListItem("--Select department--", "0"));
+            ddl.Items.Insert(0, new ListItem("--Mã phòng--", "0"));
         }
 
 

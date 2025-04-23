@@ -368,6 +368,36 @@ namespace DelightShop
             return products;
         }
 
+        //tìm loại sp
+        public static List<category> SearchCategoriesByName(string keyword)
+        {
+            List<category> categories = new List<category>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT MaLoaiSP, TenLoaiSP FROM LoaiSP WHERE TenLoaiSP LIKE @keyword";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    category cat = new category()
+                    {
+                        categoryID = Convert.ToInt32(reader["MaLoaiSP"]),
+                        categoryName = reader["TenLoaiSP"].ToString()
+                    };
+                    categories.Add(cat);
+                }
+
+                reader.Close();
+            }
+
+            return categories;
+        }
 
         //load tất cả loại sp
         public static List<category> GetCategories()

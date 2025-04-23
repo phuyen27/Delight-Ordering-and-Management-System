@@ -63,9 +63,9 @@
                     OnRowUpdating="gvEmployees_RowUpdating"
                     DataKeyNames="employeeID" OnSorting="gvEmployees_Sorting">
                     <Columns>
-                        <asp:BoundField DataField="employeeID" HeaderText="Employee ID" SortExpression="employeeID" ReadOnly="True" />
+                        <asp:BoundField DataField="employeeID" HeaderText="Mã NV" SortExpression="employeeID" ReadOnly="True" />
 
-                        <asp:TemplateField HeaderText="First Name">
+                        <asp:TemplateField HeaderText="Họ NV">
                             <ItemTemplate>
                                 <asp:Label ID="lblFirstName" runat="server" Text='<%# Eval("firstName") %>' />
                             </ItemTemplate>
@@ -74,7 +74,7 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Last Name">
+                        <asp:TemplateField HeaderText="Tên NV">
                             <ItemTemplate>
                                 <asp:Label ID="lblLastName" runat="server" Text='<%# Eval("lastName") %>' />
                             </ItemTemplate>
@@ -83,7 +83,7 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Phone">
+                        <asp:TemplateField HeaderText="SĐT">
                             <ItemTemplate>
                                 <asp:Label ID="lblPhone" runat="server" Text='<%# Eval("phone") %>' />
                             </ItemTemplate>
@@ -92,20 +92,20 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Gender">
+                        <asp:TemplateField HeaderText="Giới tính">
                             <ItemTemplate>
                                 <asp:Label ID="lblGender" runat="server" Text='<%# Eval("gender") %>' />
                             </ItemTemplate>
                             <EditItemTemplate>
                                 <asp:DropDownList ID="ddlGender" runat="server">
-                                    <asp:ListItem Value="Male">Male</asp:ListItem>
-                                    <asp:ListItem Value="Female">Female</asp:ListItem>
-                                    <asp:ListItem Value="Other">Other</asp:ListItem>
+                                    <asp:ListItem Value="Male">Nam</asp:ListItem>
+                                    <asp:ListItem Value="Female">Nữ</asp:ListItem>
+                                    <asp:ListItem Value="Other">Khác</asp:ListItem>
                                 </asp:DropDownList>
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Date of Birth">
+                        <asp:TemplateField HeaderText="Ngày sinh">
                             <ItemTemplate>
                                 <asp:Label ID="lblDOB" runat="server" Text='<%# Eval("dob", "{0:dd/MM/yyyy}") %>' />
                             </ItemTemplate>
@@ -114,7 +114,7 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Employee Type">
+                        <asp:TemplateField HeaderText="Phòng ban">
                             <ItemTemplate>
                                 <asp:Label ID="lblEmployeeType" runat="server" Text='<%# Eval("employeeTypeID") %>' />
                             </ItemTemplate>
@@ -124,8 +124,8 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:CommandField ShowEditButton="True" HeaderText="Edit" ButtonType="Button" ItemStyle-CssClass="editButton" />
-                        <asp:CommandField ShowDeleteButton="True" HeaderText="Delete" ButtonType="Button" ItemStyle-CssClass="deleteButton" />
+                        <asp:CommandField ShowEditButton="True" HeaderText="Sửa" ButtonType="Button" ItemStyle-CssClass="editButton" />
+                        <asp:CommandField ShowDeleteButton="True" HeaderText="Xóa" ButtonType="Button" ItemStyle-CssClass="deleteButton" />
                     </Columns>
                 </asp:GridView>
 

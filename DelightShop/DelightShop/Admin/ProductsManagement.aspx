@@ -164,7 +164,9 @@
             margin: 10px;
         }
 
-       
+       .form-control {
+           height:35px;
+       }
 
     .product-form h3 {
         font-size: 24px;
