@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\receipdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\receipdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\customermanagement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\customermanagement.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\receiptmanage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\receiptmanage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\sidebar.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\sidebar.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\app_data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\app_data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\delightshop\\admin\\receipdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\receipdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\orderdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\orderdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\orderdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\orderdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\manageorders.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\manageorders.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\admin\\productsmanagement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\admin\\productsmanagement.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\delightshop\\app_data\\classproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\app_data\\classproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|d:\\dai_hoc\\code\\manager\\delightshop\\delightshop\\user\\headerfooter.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{BD124C9D-9A5F-4A58-AA63-B996E6B8F9E6}|DelightShop\\DelightShop.csproj|solutionrelative:delightshop\\user\\headerfooter.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,123 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReceiptManage.aspx.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceiptManage.aspx.cs",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\ReceiptManage.aspx.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceiptManage.aspx.cs",
-              "RelativeToolTip": "DelightShop\\Admin\\ReceiptManage.aspx.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:09:24.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReceipDetail.aspx.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceipDetail.aspx.cs",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\ReceipDetail.aspx.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceipDetail.aspx.cs",
-              "RelativeToolTip": "DelightShop\\Admin\\ReceipDetail.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:06:58.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderDetail.aspx",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\OrderDetail.aspx",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\OrderDetail.aspx",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\OrderDetail.aspx",
-              "RelativeToolTip": "DelightShop\\Admin\\OrderDetail.aspx",
+              "Title": "CustomerManagement.aspx",
+              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\CustomerManagement.aspx",
+              "RelativeDocumentMoniker": "DelightShop\\Admin\\CustomerManagement.aspx",
+              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\CustomerManagement.aspx",
+              "RelativeToolTip": "DelightShop\\Admin\\CustomerManagement.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-23T14:42:06.946Z",
+              "WhenOpened": "2025-04-24T03:15:40.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderDetail.aspx.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\OrderDetail.aspx.cs",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\OrderDetail.aspx.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\OrderDetail.aspx.cs",
-              "RelativeToolTip": "DelightShop\\Admin\\OrderDetail.aspx.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwBgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T14:41:45.474Z",
+              "DocumentIndex": 1,
+              "Title": "sidebar.Master",
+              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\sidebar.Master",
+              "RelativeDocumentMoniker": "DelightShop\\Admin\\sidebar.Master",
+              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\sidebar.Master",
+              "RelativeToolTip": "DelightShop\\Admin\\sidebar.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-24T03:13:49.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\App_Data\\Order.cs",
-              "RelativeDocumentMoniker": "DelightShop\\App_Data\\Order.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\App_Data\\Order.cs",
-              "RelativeToolTip": "DelightShop\\App_Data\\Order.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAADwv60AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T14:30:35.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ManageOrders.aspx.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ManageOrders.aspx.cs",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\ManageOrders.aspx.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ManageOrders.aspx.cs",
-              "RelativeToolTip": "DelightShop\\Admin\\ManageOrders.aspx.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T14:30:02.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductsManagement.aspx.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ProductsManagement.aspx.cs",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\ProductsManagement.aspx.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ProductsManagement.aspx.cs",
-              "RelativeToolTip": "DelightShop\\Admin\\ProductsManagement.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T09:27:37.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "classProduct.cs",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\App_Data\\classProduct.cs",
-              "RelativeDocumentMoniker": "DelightShop\\App_Data\\classProduct.cs",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\App_Data\\classProduct.cs",
-              "RelativeToolTip": "DelightShop\\App_Data\\classProduct.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwJABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T09:21:13.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReceipDetail.aspx",
-              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceipDetail.aspx",
-              "RelativeDocumentMoniker": "DelightShop\\Admin\\ReceipDetail.aspx",
-              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\Admin\\ReceipDetail.aspx",
-              "RelativeToolTip": "DelightShop\\Admin\\ReceipDetail.aspx",
+              "Title": "HeaderFooter.Master",
+              "DocumentMoniker": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\User\\HeaderFooter.Master",
+              "RelativeDocumentMoniker": "DelightShop\\User\\HeaderFooter.Master",
+              "ToolTip": "D:\\Dai_Hoc\\Code\\Manager\\DelightShop\\DelightShop\\User\\HeaderFooter.Master",
+              "RelativeToolTip": "DelightShop\\User\\HeaderFooter.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-21T14:31:43.952Z",
+              "WhenOpened": "2025-04-24T03:13:00.257Z",
               "EditorCaption": ""
             }
           ]

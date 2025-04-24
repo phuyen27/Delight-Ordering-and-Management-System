@@ -13,9 +13,23 @@ namespace DelightShop.Admin
         {
             if (!IsPostBack)
             {
-                BindData();
                 LoadEmployeeIDs();
+                string searchParam = Request.QueryString["search"];
+                int keyword;
+
+                if (int.TryParse(searchParam, out keyword))
+                {
+                    var result = order.getReceipts(keyword);
+                    gvReceipts.DataSource = result;
+                    gvReceipts.DataBind();
+                }
+                else
+                {
+                    BindData();
+                }
             }
+
+            
         }
 
         private void BindData()

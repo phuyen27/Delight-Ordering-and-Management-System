@@ -103,10 +103,11 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="logout">
+					<a href="#" onclick="confirmLogout(event)" class="logout">
 						<i class='bx bxs-log-out-circle' ></i>
 						<span class="text">Đăng xuất</span>
 					</a>
+					
 				</li>
 			</ul>
 		</section>
@@ -229,9 +230,18 @@
                            parentLi.classList.add('active');
                        }
                    });
-               });
+			   });
+
+               function confirmLogout(event) {
+                   event.preventDefault();
+
+                   if (confirm("Bạn có muốn đăng xuất không?")) {
+                       window.location.href = "/Signin.aspx";
+                   }
+               }
 
            </script>
+	
 </body>
 
 

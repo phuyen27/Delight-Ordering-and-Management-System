@@ -33,14 +33,14 @@
         </div>
 
         <asp:GridView ID="gvDepartments" runat="server" AutoGenerateColumns="False" CssClass="table_green" BorderWidth="1"
-            GridLines="None" AllowPaging="True" PageSize="10" DataKeyNames="departmentID"
+            GridLines="None" AllowPaging="True" PageSize="10" DataKeyNames="DepartmentID"
             OnRowEditing="gvDepartments_RowEditing"
             OnRowUpdating="gvDepartments_RowUpdating"
             OnRowCancelingEdit="gvDepartments_RowCancelingEdit"
             OnRowDeleting="gvDepartments_RowDeleting"
             OnPageIndexChanging="gvDepartments_PageIndexChanging">
             <Columns>
-                <asp:BoundField DataField="departmentID" HeaderText="Mã PB" ReadOnly="True" />
+                <asp:BoundField DataField="DepartmentID" HeaderText="Mã PB" ReadOnly="True" />
                 <asp:BoundField DataField="departmentName" HeaderText="Tên phòng ban" />
                 <asp:BoundField DataField="departmentDate" HeaderText="Ngày thành lập" DataFormatString="{0:yyyy-MM-dd}" />
                 <asp:BoundField DataField="departmentQuantity" HeaderText="Số lượng nhân sự" />

@@ -14,32 +14,40 @@ namespace DelightShop
         {
             
         }
-
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
             string username = Request.Form["username"];
             string password = Request.Form["password"];
 
-            // Kiểm tra thông tin đăng nhập
+            // 👉 Kiểm tra thông tin đăng nhập admin trước
+            if (username == "admindelight@gmail.com" && password == "admin123")
+            {
+                // Lưu thông tin admin vào session (tuỳ bạn dùng hoặc không)
+                Session["IsAdmin"] = true;
+                Session["Username"] = username;
+
+                // 👉 Chuyển đến trang dashboard trong thư mục Admin
+                Response.Redirect("~/Admin/Dashboard.aspx");
+                return;
+            }
+
+            // 👉 Kiểm tra người dùng thường
             Customer customer = Customer.GetCustomer(username, password);
 
             if (customer != null)
             {
-                // Lưu thông tin người dùng vào session
                 Session["CustomerID"] = customer.CustomerID;
                 Session["Username"] = customer.Username;
                 Session["Password"] = customer.Password;
-                // Chuyển hướng đến trang chủ của người dùng
+
                 Response.Redirect("~/User/HomePage.aspx");
             }
-
             else
             {
-                // Nếu đăng nhập thất bại, thông báo lỗi
                 Response.Write("<script>alert('Sai tên đăng nhập hoặc mật khẩu!');</script>");
             }
-
         }
+
 
     }
 }

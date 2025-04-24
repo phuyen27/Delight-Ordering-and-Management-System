@@ -191,7 +191,7 @@ namespace DelightShop
             {
                 string query = @"
         SELECT 
-            P.MaPNH, P.NgayNhap, P.TongTien, P.MaNV
+            P.MaPNH, P.NgayNhap, P.TongTien, P.MaNV, P.MaNCC
         FROM 
             PhieuNhapHang P
         WHERE 
@@ -210,7 +210,8 @@ namespace DelightShop
                         receiptID = Convert.ToInt32(reader["MaPNH"]),
                         receiptDate = Convert.ToDateTime(reader["NgayNhap"]),
                         receiptTotalPrice = Convert.ToDecimal(reader["TongTien"]),
-                        receiptStaff = Convert.ToInt32(reader["MaNV"])
+                        receiptStaff = Convert.ToInt32(reader["MaNV"]),
+                        supplierID = Convert.ToInt32(reader["MaNCC"])
                     };
                     receipts.Add(receiptItem);
                 }
